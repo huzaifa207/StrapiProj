@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_social_links_social_links",
+  "info": {
+    "name": "SocialLinks",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "youtube": {
+      "type": "string",
+      "unique": true
+    },
+    "facebook": {
+      "type": "string",
+      "unique": true
+    },
+    "twitter": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "instagram": {
+      "type": "string",
+      "unique": true
+    },
+    "pinterest": {
+      "type": "string",
+      "unique": true
+    },
+    "linkedin": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}
