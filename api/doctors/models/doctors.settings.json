@@ -101,6 +101,14 @@
       "type": "component",
       "repeatable": true,
       "component": "registrations.registrations"
+    },
+    "patients": {
+      "via": "doctors",
+      "collection": "patient"
+    },
+    "booking": {
+      "via": "doctorBooking",
+      "model": "booking"
     }
   }
 }
