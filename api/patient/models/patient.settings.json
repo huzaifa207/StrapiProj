@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "patients",
+  "info": {
+    "name": "Patient",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FirstName": {
+      "type": "string"
+    },
+    "LastName": {
+      "type": "string"
+    },
+    "DOB": {
+      "type": "date"
+    },
+    "BloodGroup": {
+      "type": "string"
+    },
+    "EmailID": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "MobileNo": {
+      "type": "biginteger"
+    },
+    "address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-details.contact-details"
+    },
+    "doctors": {
+      "collection": "doctors",
+      "via": "patients",
+      "dominant": true
+    }
+  }
+}
