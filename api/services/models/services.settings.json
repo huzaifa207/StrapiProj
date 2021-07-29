@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Services"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "service": {
+      "type": "string"
+    },
+    "doctors": {
+      "via": "services",
+      "collection": "doctors"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_contact_details_contact_details",
+  "info": {
+    "name": "contactDetails",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "richtext"
+    },
+    "city": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "integer"
+    }
+  }
+}

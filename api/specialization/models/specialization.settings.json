@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "specializations",
+  "info": {
+    "name": "Specialization"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "specializationField": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "doctors": {
+      "via": "specializations",
+      "collection": "doctors"
+    }
+  }
+}

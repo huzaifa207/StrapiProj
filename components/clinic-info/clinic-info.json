@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_clinic_info_clinic_infos",
+  "info": {
+    "name": "ClinicInfo",
+    "icon": "clinic-medical"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

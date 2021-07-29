@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "doctors",
+  "info": {
+    "name": "Doctors",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true,
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "required": true
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "dob": {
+      "type": "date"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "contactDetails": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-details.contact-details"
+    },
+    "clinicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "clinic-info.clinic-info"
+    },
+    "education": {
+      "type": "component",
+      "repeatable": true,
+      "component": "eduction.education"
+    },
+    "experience": {
+      "type": "component",
+      "repeatable": true,
+      "component": "experience.experience"
+    },
+    "biography": {
+      "type": "text"
+    },
+    "specializations": {
+      "collection": "specialization",
+      "via": "doctors",
+      "dominant": true
+    },
+    "services": {
+      "collection": "services",
+      "via": "doctors",
+      "dominant": true
+    },
+    "freeConsultaion": {
+      "type": "boolean",
+      "default": false
+    },
+    "pricePerHour": {
+      "type": "integer",
+      "min": 100,
+      "default": 100
+    },
+    "awards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "awards.awards"
+    },
+    "memberships": {
+      "type": "component",
+      "repeatable": true,
+      "component": "membership.membership"
+    },
+    "registrations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "registrations.registrations"
+    }
+  }
+}

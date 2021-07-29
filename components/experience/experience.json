@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_experience_experiences",
+  "info": {
+    "name": "Experience",
+    "icon": "expand"
+  },
+  "options": {},
+  "attributes": {
+    "hospital": {
+      "type": "string"
+    },
+    "from": {
+      "type": "date"
+    },
+    "to": {
+      "type": "date"
+    },
+    "designation": {
+      "type": "string"
+    }
+  }
+}

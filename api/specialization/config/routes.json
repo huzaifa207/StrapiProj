@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/specializations",
+      "handler": "specialization.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/specializations/count",
+      "handler": "specialization.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/specializations/:id",
+      "handler": "specialization.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/specializations",
+      "handler": "specialization.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/specializations/:id",
+      "handler": "specialization.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/specializations/:id",
+      "handler": "specialization.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

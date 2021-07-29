@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_registrations_registrations",
+  "info": {
+    "name": "Registrations",
+    "icon": "registered"
+  },
+  "options": {},
+  "attributes": {
+    "award": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    }
+  }
+}

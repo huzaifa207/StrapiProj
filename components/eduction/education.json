@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_eduction_educations",
+  "info": {
+    "name": "Education",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "degree": {
+      "type": "string"
+    },
+    "college": {
+      "type": "string"
+    },
+    "completionYear": {
+      "type": "integer"
+    }
+  }
+}

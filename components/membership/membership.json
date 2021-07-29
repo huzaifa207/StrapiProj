@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_membership_memberships",
+  "info": {
+    "name": "Membership",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "membership": {
+      "type": "string"
+    }
+  }
+}
