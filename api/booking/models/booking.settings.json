@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "name": "Booking"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bookingtime": {
+      "type": "datetime"
+    },
+    "doctorBooking": {
+      "collection": "doctors",
+      "via": "booking"
+    }
+  }
+}

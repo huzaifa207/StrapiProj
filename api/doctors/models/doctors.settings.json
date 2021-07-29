@@ -102,6 +102,7 @@
       "repeatable": true,
       "component": "registrations.registrations"
     },
+<<<<<<< HEAD
     "patientCount": {
       "type": "integer",
       "default": 0
@@ -119,6 +120,15 @@
       "type": "component",
       "repeatable": false,
       "component": "social-links.social-links"
+=======
+    "patients": {
+      "via": "doctors",
+      "collection": "patient"
+    },
+    "booking": {
+      "via": "doctorBooking",
+      "model": "booking"
+>>>>>>> 761ad9392be0a9f23106324ace1f3fa97261ea10
     }
   }
 }
