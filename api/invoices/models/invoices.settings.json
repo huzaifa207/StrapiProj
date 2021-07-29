@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "name": "Invoices",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Order": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Issued": {
+      "type": "date"
+    },
+    "Payment_Method": {
+      "type": "string",
+      "required": true
+    },
+    "Discount": {
+      "type": "float"
+    },
+    "Other_Info": {
+      "type": "text"
+    },
+    "Details": {
+      "type": "component",
+      "repeatable": true,
+      "component": "details.details",
+      "required": true
+    }
+  }
+}
