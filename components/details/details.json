@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_details_details",
+  "info": {
+    "name": "Details",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Description": {
+      "type": "text"
+    },
+    "Quantity": {
+      "type": "integer",
+      "required": true
+    },
+    "VAT": {
+      "type": "float"
+    },
+    "Total": {
+      "type": "float",
+      "required": true
+    }
+  }
+}
