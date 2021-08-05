@@ -28,6 +28,10 @@
     "doctor": {
       "via": "reviews",
       "model": "doctors"
+    },
+    "patient": {
+      "via": "reviews",
+      "model": "patient"
     }
   }
 }

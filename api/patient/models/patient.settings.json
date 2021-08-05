@@ -12,36 +12,44 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "FirstName": {
+    "firstName": {
       "type": "string"
     },
-    "LastName": {
+    "lastName": {
       "type": "string"
     },
-    "DOB": {
+    "dob": {
       "type": "date"
     },
-    "BloodGroup": {
+    "bloodGroup": {
       "type": "string"
     },
-    "EmailID": {
-      "type": "email"
-    },
-    "password": {
-      "type": "password"
-    },
-    "MobileNo": {
-      "type": "biginteger"
-    },
-    "address": {
+    "contactDetails": {
       "type": "component",
       "repeatable": false,
       "component": "contact-details.contact-details"
     },
-    "doctors": {
-      "collection": "doctors",
-      "via": "patients",
-      "dominant": true
+    "reviews": {
+      "collection": "reviews",
+      "via": "patient"
+    },
+    "favorites": {
+      "collection": "doctors"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "userRole": {
+      "via": "patient",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

@@ -1,22 +1,28 @@
 {
   "kind": "collectionType",
-  "collectionName": "bookings",
+  "collectionName": "appointments",
   "info": {
-    "name": "Booking"
+    "name": "Appointment",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "bookingtime": {
       "type": "datetime"
     },
-    "doctorBooking": {
-      "collection": "doctors",
-      "via": "booking"
+    "doctor": {
+      "model": "doctors"
+    },
+    "patient": {
+      "model": "patient"
+    },
+    "status": {
+      "type": "boolean"
     }
   }
 }

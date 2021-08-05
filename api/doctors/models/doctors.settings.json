@@ -12,28 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "username": {
-      "type": "string",
-      "unique": false,
-      "required": true
-    },
-    "email": {
-      "type": "email",
-      "unique": true,
-      "required": true
-    },
-    "password": {
-      "type": "password",
-      "required": true
-    },
     "firstName": {
       "type": "string"
     },
     "lastName": {
       "type": "string"
-    },
-    "phone": {
-      "type": "biginteger"
     },
     "dob": {
       "type": "date"
@@ -68,11 +51,6 @@
     "biography": {
       "type": "text"
     },
-    "specializations": {
-      "collection": "specialization",
-      "via": "doctors",
-      "dominant": true
-    },
     "services": {
       "collection": "services",
       "via": "doctors",
@@ -102,7 +80,6 @@
       "repeatable": true,
       "component": "registrations.registrations"
     },
-<<<<<<< HEAD
     "patientCount": {
       "type": "integer",
       "default": 0
@@ -120,15 +97,19 @@
       "type": "component",
       "repeatable": false,
       "component": "social-links.social-links"
-=======
+    },
     "patients": {
-      "via": "doctors",
       "collection": "patient"
     },
-    "booking": {
-      "via": "doctorBooking",
-      "model": "booking"
->>>>>>> 761ad9392be0a9f23106324ace1f3fa97261ea10
+    "userRole": {
+      "via": "doctor",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "specializations": {
+      "collection": "specialization",
+      "via": "doctors",
+      "dominant": true
     }
   }
 }
