@@ -110,6 +110,11 @@
       "collection": "specialization",
       "via": "doctors",
       "dominant": true
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

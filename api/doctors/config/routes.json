@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/doctors/city/:city",
+      "handler": "doctors.findByCity",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
