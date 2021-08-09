@@ -28,11 +28,6 @@
         "female"
       ]
     },
-    "contactDetails": {
-      "type": "component",
-      "repeatable": false,
-      "component": "contact-details.contact-details"
-    },
     "clinicInfo": {
       "type": "component",
       "repeatable": false,
@@ -52,8 +47,8 @@
       "type": "text"
     },
     "services": {
-      "collection": "services",
       "via": "doctors",
+      "collection": "services",
       "dominant": true
     },
     "freeConsultaion": {
@@ -82,7 +77,8 @@
     },
     "patientCount": {
       "type": "integer",
-      "default": 0
+      "default": 0,
+      "required": true
     },
     "rating": {
       "type": "integer",
@@ -101,19 +97,54 @@
     "patients": {
       "collection": "patient"
     },
-    "userRole": {
-      "via": "doctor",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "specializations": {
-      "collection": "specialization",
       "via": "doctors",
+      "collection": "specialization",
       "dominant": true
     },
     "verified": {
       "type": "boolean",
       "default": false,
+      "required": true
+    },
+    "address": {
+      "type": "text"
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "province": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string",
+      "default": "Pakistan"
+    },
+    "zipCode": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "password": {
+      "type": "password",
+      "required": true
+    },
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "fullName",
+      "required": true
+    },
+    "patientCountPerDay": {
+      "type": "integer",
+      "default": 0,
       "required": true
     }
   }

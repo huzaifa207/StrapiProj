@@ -59,14 +59,6 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "patient": {
-      "via": "userRole",
-      "model": "patient"
-    },
-    "doctor": {
-      "via": "userRole",
-      "model": "doctors"
-    },
     "number": {
       "type": "string",
       "required": true

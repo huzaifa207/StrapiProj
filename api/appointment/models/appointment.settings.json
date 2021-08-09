@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appointments",
+  "info": {
+    "name": "Appointment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "appointmentDate": {
+      "type": "date",
+      "required": true
+    },
+    "appointmentTime": {
+      "type": "time",
+      "required": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "doctor": {
+      "model": "doctors"
+    },
+    "patient": {
+      "model": "patient"
+    },
+    "cancelledByPatient": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "cancelledByDoctor": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "paymentDone": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "callForRefund": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "cashOnDelivery",
+        "creditDebit"
+      ],
+      "required": true
+    }
+  }
+}

@@ -20,6 +20,10 @@
     "doctors": {
       "via": "specializations",
       "collection": "doctors"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "specializationField"
     }
   }
 }

@@ -12,15 +12,12 @@ module.exports = {
     let entities = [];
     let { city } = ctx.params;
 
-    console.log(strapi.services.doctors.find);
-    entities = await strapi.services.doctors.find();
+    entities = await strapi.services.doctors.find({ city: city });
 
-    let filtered_entities = await entities.filter(
-      (entity) => entity.contactDetails && entity.contactDetails.city === city
-    );
-
-    return filtered_entities.map((entity) =>
+    return entities.map((entity) =>
       sanitizeEntity(entity, { model: strapi.models.doctors })
     );
   },
+
+  create: async (ctx) => {},
 };
